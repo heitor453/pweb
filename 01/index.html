@@ -12,13 +12,18 @@
             function escreve(arg){
                 document.write(arg);
             }
-                
+            function  escreveDiv(texto){
+                document.getElementById("minhaDiv").innerHTML = texto;
+            }
+            
         </script>
     </head>
-    <body>
-        <h1>javascript</h1>
+    <body style="background-color: black;">
+        <h1 style="color: aqua; background-color: blue;">javascript</h1>
         
-        <button onclick="minhafuncao(10,20)">Clique aqui</button>
+        <button onclick ="minhafuncao(10,20)">Clique aqui</button>
         <button onclick="escreve('<h1> programação web </h1>')">escreve</button>
+        
+       
     </body>
 </html>
