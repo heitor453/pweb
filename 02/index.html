@@ -5,6 +5,14 @@
         <script type="text/javascript">
            function minhafuncao(arg){
             var raiz = Math.sqrt(arg);
+            alert("A raiz quadrada de " + arg + " é: " + raiz);
+           }
+           function  escreveDiv(texto){
+                document.getElementById("minhaDiv").innerHTML = texto;
+           }
+           function escrevediv2(){
+            texto = prompt("Digite um texto:");
+            document.getElementById("minhaDiv2").innerHTML = texto;
            }
 
             
@@ -14,9 +22,19 @@
         <h1 style="color: aqua; background-color: blue;">javascript</h1>
         
         <button onclick ="minhafuncao(25)">raiz de 25</button> <br>
-        <button onclick ="minhafuncao(16)">raiz de 16</button> <br>
         <button onclick ="minhafuncao(36)">raiz de 36</button> <br>
-        <button onclick ="minhafuncao(49)">raiz de 49</button> <br>
+        <button onclick ="minhafuncao(49)">raiz de 49</button> <br><hr>
+
+
+        <button onclick="escreveDiv('<h1>pweb</h1>')">escreve div</button>
+        <div id="minhaDiv" style="color: white; background-color: gray; margin-top: 20px; padding: 10px;"></div>
+
+        <h1> escrevendo um texto dinamico</h1>
+        <button onclick="escrevediv2()">escreve div 2</button> <br><br>
+        <div id="minhaDiv2" style="color: white; background-color: gray; margin-top: 20px; padding: 10px;"></div>
+
+    
+
         
         
        
