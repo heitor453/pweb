@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>javascript</title>
+        <script type="text/javascript">
+                let linguagens = Array ();
+                linguagens[0] = "HTML";
+                linguagens[1] = "CSS";
+                linguagens[2] = "JavaScript";
+                linguagens[3] = "PHP";
+                linguagens[4] = "Dart";
+                linguagens[5] = "Bootstrap";
+                linguagens[6] = "ruby on rails";
+            function mostrarlista(){
+                const conteiner = document.getElementById("minhaDiv");
+                for (var i=0; i<linguagens.length; i++){
+                    var tag = '<h5>'+i+' - '+linguagens[i]+'</h5>'
+                    conteiner.innerHTML += tag;
+                }
+            
+                
+            }
+
+            function posicaolinguagem(){
+                var indice= prompt("Digite o índice da linguagem que deseja exibir (0 a 6):");
+                alert(linguagens[indice]);
+                if (indice > 6){
+                    alert("Índice inválido! Digite um número entre 0 e 6.");
+                }
+
+
+            }
+
+
+
+            let frutas = Array ();
+                frutas[0] = "BANANA";
+                frutas[1] = "COCO";
+                frutas[2] = "MAÇÃ";
+                frutas[3] = "PÊRA";
+                frutas[4] = "MORANGO";
+                frutas[5] = "UVA";
+                frutas[6] = "ABACAXI";
+                function mostrarfruta(){
+                const conteiner = document.getElementById("minhaDiv");
+                for (var i=0; i<frutas.length; i++){
+                    var tag = '<h5>'+i+' - '+frutas[i]+'</h5>'
+                    conteiner.innerHTML += tag;
+                }
+            
+                
+            }
+            
+
+            function posicaofruta(){
+                var indice= prompt("Digite o índice da fruta que deseja exibir (0 a 6):");
+                alert(frutas[indice]);
+                if (indice > 6){
+                    alert("Índice inválido! Digite um número entre 0 e 6.");
+                }
+
+
+            }
+
+
+        
+            
+        </script>
+    </head>
+    <body style="background-color: rgb(167, 178, 212);">
+        <h1 style="color: aqua; background-color: blue;">javascript</h1>
+        
+        <button onclick ="mostrarlista()">criar array</button> <br>
+        <button onclick="posicaolinguagem('')">posicao no array</button> <br><br>  <hr>
+        
+        <div id= "minhaDiv"></div>
+        <button onclick ="mostrarfruta()">criar array das frutas</button> <br>
+        <button onclick="posicaofruta('')">posicao  das  frutas no array</button>
+        
+        <div id= "minhaDiv2"></div>
+       
+    </body>
+</html>
