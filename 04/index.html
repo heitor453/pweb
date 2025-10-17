@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>javascript</title>
+        <script type="text/javascript">
+                let pilhapessoas = Array ();
+                function mostrarlista(){
+                    const conteiner = document.getElementById("minhaDiv");  
+                    conteiner.innerHTML = '' ;
+
+                    for (var i = 0; i < pilhapessoas.length; i++){
+                        var tag = '<h5>'+i+' - '+pilhapessoas[i]+'</h5>'
+                        conteiner.innerHTML += tag;
+
+
+                    }
+                }
+                function adicionarPessoa(){
+                    var nome = prompt("Digite o nome da pessoa para adicionar à pilha:");
+                    pilhapessoas.push(nome);
+                    mostrarlista();
+                }
+                function posicaoPessoa(){
+                    var indice= prompt("Digite o índice da pessoa que deseja exibir:");
+                    alert(pilhapessoas[indice]);
+                    if (indice >= pilhapessoas.length){
+                        alert("Índice inválido! Digite um número entre 0 e " + (pilhapessoas.length - 1) + ".");
+                        
+                    }
+
+                }
+
+
+
+
+
+                function removerPessoa(){
+                    if (pilhapessoas.length === 0){
+                        alert("A pilha está vazia. Não há pessoas para remover.");
+                    } else {
+                        var removido = pilhapessoas.pop();
+                        alert("Pessoa removida: " + removido);
+                        mostrarlista();
+                    }
+                }
+                function limparPilha(){
+                    pilhapessoas = [];
+                    mostrarlista();
+                }
+                    
+                
+                
+
+
+        
+            
+        </script>
+    </head>
+    <body style="background-color: rgb(167, 178, 212);">
+        <h1 style="color: aqua; background-color: rgb(72, 145, 228);">javascript</h1>
+        
+        
+        <button onclick ="adicionarPessoa()">Adicionar Pessoa</button> <br> <hr>
+        <button onclick ="posicaoPessoa()">Exibir Pessoa por Índice</button> <br> <hr>
+        <button onclick ="removerPessoa()">Remover Pessoa</button> <br> <hr>
+        <button onclick ="limparPilha()">Limpar Pilha</button> <br><hr>
+        <button onclick ="mostrarlista()">Mostrar Pilha de Pessoas</button> <br> <hr>
+
+        <div id="minhaDiv"></div>
+       
+    </body>
+</html>
